@@ -1,0 +1,12 @@
+<template>
+     <template if:true={data}>
+        <template for:each={data} for:item="row">
+            <c-show-record 
+                        key={row.Id}
+                        account-name={row.Name}
+                        owner={row.ownerName}
+                        annual-revenue={row.AnnualRevenue}>
+            </c-show-record>
+        </template>    
+     </template>
+</template>

@@ -1,0 +1,46 @@
+<template>
+    <lightning-accordion class="example-accordion" onsectiontoggle={handleToggleSection} allow-multiple-sections-open
+        >
+        <lightning-accordion-section name={accountName} label={accountName}>
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-size_4-of-6">
+                    Owner: {owner}
+                </div>
+                <div class="slds-col slds-size_2-of-6">
+                    <div class="slds-form-element">
+                        <label class="slds-checkbox_toggle slds-grid">
+                            <span class="slds-form-element__label slds-m-bottom_none">Toggle Label</span>
+                            <input type="checkbox" name="checkbox-toggle-19" value="checkbox-toggle-19"
+                                aria-describedby="checkbox-toggle-19" checked="" onchange={handleChange}/>
+                            <span id="checkbox-toggle-19" class="slds-checkbox_faux_container" aria-live="assertive">
+                                <span class="slds-checkbox_faux"></span>
+                                <span class="slds-checkbox_on">Enabled</span>
+                                <span class="slds-checkbox_off">Disabled</span>
+                            </span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-size_4-of-6">
+                    Annual Revenue: {annualRevenue}
+                </div>
+                <div class="slds-col slds-size_2-of-6">
+                    <div class="slds-form-element">
+                        <label class="slds-checkbox_toggle slds-grid">
+                            <span class="slds-form-element__label slds-m-bottom_none">Toggle Label</span>
+                            <input type="checkbox" name="checkbox-toggle-20" value="checkbox-toggle-19"
+                                aria-describedby="checkbox-toggle-19" checked="" onchange={handleChange}
+                                disabled={hasDisabled} data-id="secondInput"/>
+                            <span id="checkbox-toggle-20" class="slds-checkbox_faux_container" aria-live="assertive">
+                                <span class="slds-checkbox_faux"></span>
+                                <span class="slds-checkbox_on">Enabled</span>
+                                <span class="slds-checkbox_off">Disabled</span>
+                            </span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </lightning-accordion-section>
+    </lightning-accordion>
+</template>
